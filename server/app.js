@@ -7,8 +7,8 @@ const { API_VERSION  } = require('./config');
 //Load Routings - Carga de rutas
 //Mas Adelante
 
-app.use.apply(bodyParser.urlencoded({extended: false}));
-app.use.apply(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 //Configuracion de Headers HTTP
 //Mas adelante
