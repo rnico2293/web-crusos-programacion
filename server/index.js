@@ -3,9 +3,11 @@ const app = require("./app");
 const port = process.env.PORT || 3977;
 const { API_VERSION, IP_SERVER, PORT_DB } = require("./config");
 
-//Co nexión a la base de datos
+mongoose.set("useFindAndModify", false);
+
+//Conexión a la base de datos
 mongoose.connect(
-    `mongodb://${IP_SERVER}:${PORT_DB}/webCursoProgV1`, 
+    `mongodb://${IP_SERVER}:${PORT_DB}/GaviotaBlanca`, 
     {useNewUrlParser: true }, 
     (err,res) => {
         if(err){
